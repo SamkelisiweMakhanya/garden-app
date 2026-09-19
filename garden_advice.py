@@ -1,6 +1,5 @@
 """Provide gardening advice based on season and plant type."""
 
-
 def get_season_advice(season):
     """Return gardening advice based on the selected season."""
     if season == "summer":
@@ -23,12 +22,10 @@ def get_plant_advice(plant_type):
 
 def main():
     """Generate and print gardening advice."""
-    season = "summer"
-    plant_type = "flower"
-
+    season = input("Enter the season (summer/winter): ").strip().lower()
+    plant_type = input("Enter the plant type (flower/vegetable): ").strip().lower()
     advice = get_season_advice(season)
     advice += get_plant_advice(plant_type)
-
     print(advice)
 
 
